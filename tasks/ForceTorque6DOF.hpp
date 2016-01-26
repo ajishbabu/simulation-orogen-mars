@@ -118,7 +118,8 @@ namespace mars {
     private:
         std::vector< std::string > mars_names;
         std::vector<int> mars_ids;
-        std::vector< base::samples::Wrench > wrenches;
+        //std::vector< base::samples::Wrench > wrenches;
+	base::samples::Wrenches wrenches;
 
     };
 }

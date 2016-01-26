@@ -63,6 +63,7 @@ void ForceTorque6DOF::update(double delta_t)
     	}
     }
 
+    wrenches.time = base::Time::now();
     //TODO: convert to new wrench base type, when available
     _wrenches.write(wrenches);
 
@@ -86,6 +87,8 @@ bool ForceTorque6DOF::configureHook()
     mars_names = _names.value();
 
 	wrenches.resize(num_sensors);
+        wrenches.names = mars_names;
+
 
     return true;
 }
